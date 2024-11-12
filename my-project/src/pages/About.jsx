@@ -60,9 +60,8 @@ const About = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen">
+    <div className="bg-gradient-to-b from-gray-400 to-gray-50 min-h-screen">
       <Navbar />
-      
       <motion.div 
         className="container mx-auto px-4 py-16"
         initial="hidden"
@@ -73,7 +72,7 @@ const About = () => {
           className="text-5xl font-bold text-center text-blue-950 mt-20 mb-16"
           variants={itemVariants}
         >
-          About IgaThrive
+          About us
         </motion.h1>
 
         <div className="grid md:grid-cols-2 gap-16 mb-16">
@@ -135,17 +134,17 @@ const About = () => {
         </motion.section>
 
         <motion.section 
-          variants={itemVariants}
-          className="bg-blue-950 text-white p-12 rounded-md shadow-lg text-center"
-        >
-          <h2 className="text-3xl font-semibold mb-6">Join Our Journey</h2>
-          <p className="text-lg mb-8">
-            Be part of our mission to transform online education and empower learners worldwide.
-          </p>
-          <button className="bg-white text-blue-950 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-300">
-            Get Started Today
-          </button>
-        </motion.section>
+  variants={itemVariants}
+  className=" text-gray-950 px-4 md:px-12 py-12 rounded-md shadow-lg text-center"
+>
+  <h2 className="text-3xl font-semibold mb-6">Join Our Journey</h2>
+  <p className="text-lg mb-8">
+    Be part of our mission to transform online education and empower learners worldwide.
+  </p>
+  <button className="bg-white text-blue-950 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-300">
+    Get Started Today
+  </button>
+</motion.section>
       </motion.div>
       
       <Footer />

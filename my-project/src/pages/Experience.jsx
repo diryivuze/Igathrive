@@ -13,7 +13,7 @@ const Experience = () => {
       role: 'Software Developer',
       company: 'Tech Corp',
       course: 'Computer Graphics',
-      image: '/api/placeholder/80/80',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5MZcHs2_LNv9vzMrDzCDn_APEpjZiHq0j2A&s',
       rating: 5,
       feedback: 'IgaThrive helped me acquire essential skills for my career. The Computer Graphics course was comprehensive and practical.',
       category: 'professional'
@@ -23,7 +23,7 @@ const Experience = () => {
       role: 'Digital Marketing Manager',
       company: 'Marketing Solutions',
       course: 'Professional Skills',
-      image: '/api/placeholder/80/80',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5MZcHs2_LNv9vzMrDzCDn_APEpjZiHq0j2A&s',
       rating: 5,
       feedback: 'The Professional Skills course transformed my approach to team management. The platform is intuitive and the content is top-notch!',
       category: 'professional'
@@ -33,7 +33,7 @@ const Experience = () => {
       role: 'Student',
       company: 'University of Technology',
       course: 'Web Design and Development',
-      image: '/api/placeholder/80/80',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5MZcHs2_LNv9vzMrDzCDn_APEpjZiHq0j2A&s',
       rating: 4,
       feedback: 'As a student, the web development course gave me practical skills that I could immediately apply to real projects.',
       category: 'student'
@@ -43,7 +43,7 @@ const Experience = () => {
       role: 'Bank Officer',
       company: 'Global Bank',
       course: 'E-Banking',
-      image: '/api/placeholder/80/80',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5MZcHs2_LNv9vzMrDzCDn_APEpjZiHq0j2A&s',
       rating: 5,
       feedback: 'The E-Banking course was exactly what I needed to understand modern banking systems. Excellent content and support!',
       category: 'professional'

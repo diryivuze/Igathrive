@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
 import { 
   Clock, 
   ChevronRight, 
@@ -8,30 +9,44 @@ import {
   Star,
   ArrowRight,
   CheckCircle,
-  Calendar
+  Calendar,
+  ArrowDown
 } from 'lucide-react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  };
+
+  const staggerChildren = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
 
   const slides = [
     {
       title: "Learn Professional IT Skills",
       description: "Transform your career with industry-relevant courses",
-      image: "/api/placeholder/1200/600"
+      image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/7_Top_Technical_Skills_to_Master_in_2021.jpg"
     },
     {
       title: "Expert-Led Training",
       description: "Learn from industry professionals with real-world experience",
-      image: "/api/placeholder/1200/600"
+      image: "https://img.freepik.com/premium-photo/children-e-learning-tablet-with-writing-wave-hello-book-education-development-study-desk-kids-touchscreen-notebook-with-smile-online-course-home-school-family-house_590464-303532.jpg"
     },
     {
       title: "Flexible Learning",
       description: "Study at your own pace with 24/7 access to course materials",
-      image: "/api/placeholder/1200/600"
+      image: "https://media.licdn.com/dms/image/v2/D4D12AQHu0JhzalJHyg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1690739119374?e=2147483647&v=beta&t=HfZrzk0OziAfuBTGoTrN49cLm66sX0I70Q11f7E1SoU"
     }
   ];
 
@@ -44,14 +59,14 @@ const Home = () => {
       students: 234,
       rating: 4.8
     },
-    {
-      title: 'Internet Usage',
-      timeframe: '3 weeks',
-      description: 'Learn advanced internet navigation and online security practices',
-      skills: ['Web Safety', 'Digital Literacy', 'Online Research'],
-      students: 189,
-      rating: 4.6
-    },
+    // {
+    //   title: 'Internet Usage',
+    //   timeframe: '3 weeks',
+    //   description: 'Learn advanced internet navigation and online security practices',
+    //   skills: ['Web Safety', 'Digital Literacy', 'Online Research'],
+    //   students: 189,
+    //   rating: 4.6
+    // },
     {
       title: 'Computer Components & Troubleshooting',
       timeframe: '5 weeks',
@@ -104,7 +119,8 @@ const Home = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <Navbar/>
+      <Navbar />
+      
       {/* Hero Section with Carousel */}
       <div className="relative h-[600px] overflow-hidden">
         {slides.map((slide, index) => (
@@ -119,8 +135,13 @@ const Home = () => {
               alt={slide.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-              <h1 className="text-5xl font-bold mb-4 text-center max-w-3xl transform transition-all duration-700 translate-y-0">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: currentSlide === index ? 1 : 0, y: currentSlide === index ? 0 : 20 }}
+              transition={{ duration: 0.8 }}
+              className="absolute inset-0 flex flex-col items-center justify-center text-white"
+            >
+              <h1 className="text-5xl font-bold mb-4 text-center max-w-3xl">
                 {slide.title}
               </h1>
               <p className="text-xl mb-8 text-center max-w-2xl">
@@ -134,11 +155,10 @@ const Home = () => {
                 Get Started
                 <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
-            </div>
+            </motion.div>
           </div>
         ))}
         
-        {/* Slide Indicators */}
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2">
           {slides.map((_, index) => (
             <button
@@ -151,34 +171,110 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Stats Section */}
-      <div className="bg-white py-16">
+      {/* Founder Section */}
+      <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            {[
-              { label: 'Active Students', value: '2000+' },
-              { label: 'Courses Offered', value: '7' },
-              { label: 'Expert Instructors', value: '15+' },
-              { label: 'Success Rate', value: '95%' }
-            ].map((stat, index) => (
-              <div key={index} className="p-6 rounded-lg bg-gray-50">
-                <div className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</div>
-                <div className="text-gray-600">{stat.label}</div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden">
+              <img 
+               src="/My Professional Photo.jpg" 
+               alt="Founder" 
+               className="w-full h-full object-cover" 
+              />
               </div>
-            ))}
+              <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-4 rounded-lg">
+                <p className="font-semibold">Founded in 2024</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+              <span className="text-blue-600 font-semibold">Our Story</span>
+              <h2 className="text-4xl font-bold">Bridging the Digital Divide</h2>
+              <p className="text-gray-600 leading-relaxed">
+                During my primary school years, I witnessed firsthand the struggles many face in our increasingly digital world. The lack of basic digital literacy skills wasn't just an inconvenience – it was a barrier to education, employment, and full participation in modern society.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                This realization sparked the idea for IgaThrive. We understand that in today's world, digital literacy isn't optional – it's essential. From basic computer operations to advanced IT skills, we're here to ensure no one gets left behind in the digital revolution.
+              </p>
+              <div className="grid grid-cols-2 gap-6 pt-6">
+                <div className="space-y-2">
+                  <h4 className="text-xl font-semibold">Our Mission</h4>
+                  <p className="text-gray-600">Empowering communities through accessible digital education</p>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="text-xl font-semibold">Our Vision</h4>
+                  <p className="text-gray-600">A digitally literate society where technology enables rather than excludes</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
 
-      {/* Courses Section */}
+      {/* Stats Section with Animation */}
+      <div className="bg-gray-900 py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div 
+            variants={staggerChildren}
+            initial="initial"
+            whileInView="animate"
+            className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center"
+          >
+            {[
+              { label: 'Active Students', value: '20+', icon: Users },
+              { label: 'Courses Offered', value: '7', icon: BookOpen },
+              { label: 'Expert Instructors', value: '5+', icon: Star },
+              { label: 'Success Rate', value: '95%', icon: CheckCircle }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                className="p-6 rounded-lg bg-gray-800 text-white"
+              >
+                <stat.icon className="w-8 h-8 mx-auto mb-4 text-blue-400" />
+                <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Enhanced Courses Section */}
       <div className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-2">Available Courses</h2>
-        <p className="text-gray-600 mb-8">Start your journey to professional excellence</p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl font-bold mb-4">Available Courses</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Start your journey to professional excellence with our carefully curated courses
+          </p>
+        </motion.div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courses.map((course) => (
-            <div
+        <motion.div 
+          variants={staggerChildren}
+          initial="initial"
+          whileInView="animate"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {courses.map((course, index) => (
+            <motion.div
               key={course.title}
+              variants={fadeInUp}
               className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 
                 hover:shadow-xl hover:-translate-y-1"
             >
@@ -223,7 +319,7 @@ const Home = () => {
                     Enroll Now
                   </Link>
                   <Link
-                    to="/register"
+                    to={`/courses/${course.title.toLowerCase().replace(/ /g, '-')}`}
                     className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 
                       transition-colors duration-300 flex items-center gap-2 group"
                   >
@@ -232,40 +328,39 @@ const Home = () => {
                   </Link>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
+        </motion.div>
+      </div>
+
+      {/* Call to Action Section */}
+      <div className=" py-16">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-6"
+          >
+            <h2 className="text-4xl font-bold text-gray-900">Ready to Start Your Journey?</h2>
+            <p className="text-blue-100 max-w-2xl mx-auto">
+              Join thousands of students who have already transformed their lives through digital literacy
+            </p>
+            <Link
+              to="/register"
+              className="inline-flex items-center px-8 py-4 bg-gray-900 text-white rounded-full 
+                hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 gap-2 group"
+            >
+              Get Started Today
+              <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
+            </Link>
+          </motion.div>
         </div>
       </div>
 
-      {/* Why Choose Us Section */}
-      <div className="bg-gray-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Why Choose IgaThrive?</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Expert Instructors',
-                description: 'Learn from industry professionals with years of experience'
-              },
-              {
-                title: 'Flexible Learning',
-                description: 'Study at your own pace with lifetime access to course materials'
-              },
-              {
-                title: 'Job-Ready Skills',
-                description: 'Gain practical skills that employers are looking for'
-              }
-            ].map((feature, index) => (
-              <div key={index} className="text-center p-6">
-                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      <Footer/>
+      <Footer />
     </div>
+
   );
 };
 

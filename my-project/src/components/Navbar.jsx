@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +22,6 @@ const Navbar = () => {
     { name: 'Experience', href: '/experience' }
   ];
 
-  // Handle mobile menu animation
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -35,13 +34,12 @@ const Navbar = () => {
     <nav 
       className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-          : 'bg-gray-800/95 backdrop-blur-md'
+          ? 'bg-white/80 backdrop-blur-md shadow-2xl' 
+          : 'bg-gray-600 backdrop-blur-lg shadow-4xl bg-opacity-20'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo with hover animation */}
           <div className="flex-shrink-0 transform transition-transform duration-300 hover:scale-105">
             <a href="/" className="flex items-center group">
               <span className={`text-2xl font-bold transition-all duration-300 ${
@@ -52,7 +50,6 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
@@ -70,14 +67,13 @@ const Navbar = () => {
                 }`} />
               </a>
             ))}
-            
-            {/* Auth Buttons with hover animations */}
+
             <div className="flex items-center space-x-4">
               <a
                 href="/login"
                 className={`px-4 py-2 rounded-md text-md font-medium transition-all duration-300 transform hover:scale-105 ${
                   isScrolled 
-                    ? 'text-gray-900 hover:bg-gray-100' 
+                    ? 'text-gray-900' 
                     : 'text-white hover:bg-white/10'
                 }`}
               >
@@ -92,7 +88,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile menu button with mdooth transition */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -110,10 +105,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu with slide animation */}
       <div 
-        className={`md:hidden fixed inset-0 bg-white/95 backdrop-blur-md transition-all duration-300 ease-in-out transform ${
-          isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+        className={`md:hidden fixed inset-0 bg-gray-900 backdrop-blur-lg transition-all duration-300 ease-in-out transform ${
+          isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-5'
         }`}
         style={{ top: '80px' }}
       >
