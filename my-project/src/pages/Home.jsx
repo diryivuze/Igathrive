@@ -312,7 +312,7 @@ const Home = () => {
                     Enroll Now
                   </Link>
                   <Link
-                    to={`/courses/${course.title.toLowerCase().replace(/ /g, '-')}`}
+                    to={`/features`}
                     className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 
                       transition-colors duration-300 flex items-center gap-2 group"
                   >

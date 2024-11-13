@@ -70,16 +70,15 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {[
-                'About Us',
-                'Our Courses',
+                'About',
+                'Contact',
                 'Features',
-                'Help Center',
-                'Experience',
-                'Career'
+                'Help',
+               ' Experience'
               ].map((item) => (
                 <li key={item}>
                   <a 
-                    href={`/${item.toLowerCase().replace(' ', '-')}`}
+                    href={`/${item.toLowerCase().replace(' ', '')}`}
                     className="text-sm hover:text-blue-400 transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <ArrowRight size={16} className="transform group-hover:translate-x-1 transition-transform duration-300" />

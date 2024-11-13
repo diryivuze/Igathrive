@@ -3,8 +3,10 @@ import { motion } from 'framer-motion';
 import { FaUserCircle, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useNavigate } from 'react-router-dom';
 
 const About = () => {
+  const navigate = useNavigate();
   const team = [
     {
       name: 'Mr. Loue Sauveur Christian',
@@ -15,7 +17,7 @@ const About = () => {
         github: '#',
         twitter: '#'
       },
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxo2NFiYcR35GzCk5T3nxA7rGlSsXvIfJwg&s'
+      image: '/images/loue.jpg'
     },
     {
       name: 'Mr. Michael Alain Muhirwa',
@@ -26,7 +28,7 @@ const About = () => {
         github: '#',
         twitter: '#'
       },
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxo2NFiYcR35GzCk5T3nxA7rGlSsXvIfJwg&s'
+      image: '/images/man.jpg'
     },
     {
       name: 'Mr. David Niyonshuti',
@@ -37,7 +39,7 @@ const About = () => {
         github: '#',
         twitter: '#'
       },
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxo2NFiYcR35GzCk5T3nxA7rGlSsXvIfJwg&s'
+      image: '/images/david2.jpg'
     },{
       name: 'Mr. Daniel Iryivuze',
       role: 'MS Office & G Suite Usage Instructor',
@@ -47,7 +49,7 @@ const About = () => {
         github: '#',
         twitter: '#'
       },
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxo2NFiYcR35GzCk5T3nxA7rGlSsXvIfJwg&s'
+      image: '/images/founder.jpg'
     },{
       name: 'Miss. Vanessa Uwonkunda',
       role: 'E-Banking Instructor',
@@ -57,7 +59,7 @@ const About = () => {
         github: '#',
         twitter: '#'
       },
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxo2NFiYcR35GzCk5T3nxA7rGlSsXvIfJwg&s'
+      image: '/images/vanessa1.jpg'
     },
     {
       name: 'Miss. Sonia Ikirezi Hirwa',
@@ -68,7 +70,7 @@ const About = () => {
         github: '#',
         twitter: '#'
       },
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxo2NFiYcR35GzCk5T3nxA7rGlSsXvIfJwg&s'
+      image: '/images/woman.png'
     }
   ];
 
@@ -172,9 +174,14 @@ const About = () => {
   <p className="text-lg mb-8">
     Be part of our mission to transform online education and empower learners worldwide.
   </p>
-  <button className="bg-white text-blue-950 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-300">
-    Get Started Today
-  </button>
+  <motion.button
+          onClick={() => navigate('/register')}
+                 className="bg-white text-blue-950 px-8 py-3 rounded-full font-medium hover:bg-blue-100 transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Get Started Today
+          </motion.button>
 </motion.section>
       </motion.div>
       

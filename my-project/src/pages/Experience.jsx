@@ -3,52 +3,94 @@ import { motion } from 'framer-motion';
 import { FaStar, FaQuoteLeft, FaUserCircle } from 'react-icons/fa';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Experience = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const navigate = useNavigate();
   const testimonials = [
     {
-      name: 'John Doe',
-      role: 'Software Developer',
-      company: 'Tech Corp',
+      name: 'Igiraneza Sheilla',
+      role: 'Product Manager',
+      company: 'SheCan Africa',
       course: 'Computer Graphics',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5MZcHs2_LNv9vzMrDzCDn_APEpjZiHq0j2A&s',
+      image: '/images/woman.png',
       rating: 5,
       feedback: 'IgaThrive helped me acquire essential skills for my career. The Computer Graphics course was comprehensive and practical.',
       category: 'professional'
     },
     {
-      name: 'Jane Smith',
+      name: 'Jean Paul Bukuru',
       role: 'Digital Marketing Manager',
       company: 'Marketing Solutions',
       course: 'Professional Skills',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5MZcHs2_LNv9vzMrDzCDn_APEpjZiHq0j2A&s',
+      image: '/images/man.jpg',
       rating: 5,
       feedback: 'The Professional Skills course transformed my approach to team management. The platform is intuitive and the content is top-notch!',
       category: 'professional'
     },
     {
-      name: 'Michael Johnson',
+      name: 'Raissa Mpawenayo',
       role: 'Student',
-      company: 'University of Technology',
+      company: 'African Leadership University',
       course: 'Web Design and Development',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5MZcHs2_LNv9vzMrDzCDn_APEpjZiHq0j2A&s',
+      image: '/images/woman.png',
       rating: 4,
       feedback: 'As a student, the web development course gave me practical skills that I could immediately apply to real projects.',
       category: 'student'
     },
     {
-      name: 'Sarah Williams',
+      name: 'Nise Jabo Ghislain',
+      role: 'Project Manager',
+      company: '1:55 AM',
+      course: 'Computer Graphics',
+      image: '/images/man.jpg',
+      rating: 5,
+      feedback: 'IgaThrive helped me acquire essential skills for my career. The Computer Graphics course was comprehensive and practical.',
+      category: 'professional'
+    },
+    {
+      name: 'Elvine Mugishawimana',
       role: 'Bank Officer',
       company: 'Global Bank',
       course: 'E-Banking',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5MZcHs2_LNv9vzMrDzCDn_APEpjZiHq0j2A&s',
+      image: '/images/woman.png',
       rating: 5,
       feedback: 'The E-Banking course was exactly what I needed to understand modern banking systems. Excellent content and support!',
       category: 'professional'
+    },
+    {
+    name: 'Chancelline Niyotugendana',
+      role: 'Professional intern',
+      company: 'Flatpictures',
+      course: 'Computer Graphics',
+      image: '/images/woman.png',
+      rating: 5,
+      feedback: 'IgaThrive helped me acquire essential skills for my career. The Computer Graphics course was comprehensive and practical.',
+      category: 'student'
+    },
+    {
+      name: 'Prencia Bella Arakaza',
+      role: 'Digital Marketing Manager intern',
+      company: 'Bank of Kigali (Gisenyi Branch)',
+      course: 'Professional Skills',
+      image: '/images/woman.png',
+      rating: 5,
+      feedback: 'The Professional Skills course transformed my approach to team management. The platform is intuitive and the content is top-notch!',
+      category: 'student'
+    },
+    {
+      name: 'Joyeuse Nsabimana (Nana)',
+      role: 'Student',
+      company: 'African Leadership University',
+      course: 'Web Design and Development',
+      image: '/images/woman.png',
+      rating: 4,
+      feedback: 'As a student, the web development course gave me practical skills that I could immediately apply to real projects.',
+      category: 'student'
     }
   ];
+  
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -73,10 +115,10 @@ const Experience = () => {
     : testimonials.filter(t => t.category === selectedCategory);
 
   const stats = [
-    { label: 'Happy Students', value: '2,000+' },
+    { label: 'Happy Students', value: '10+' },
     { label: 'Course Completion Rate', value: '94%' },
     { label: 'Average Rating', value: '4.8/5' },
-    { label: 'Career Transitions', value: '500+' }
+    { label: 'Career Transitions', value: '2+' }
   ];
 
   return (
@@ -193,7 +235,8 @@ const Experience = () => {
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
           <p className="text-lg mb-8">Join thousands of successful learners and transform your career</p>
           <motion.button
-            className="bg-white text-blue-950 px-8 py-3 rounded-full font-medium hover:bg-blue-100 transition-colors"
+          onClick={() => navigate('/register')}
+                 className="bg-white text-blue-950 px-8 py-3 rounded-full font-medium hover:bg-blue-100 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

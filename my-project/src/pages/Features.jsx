@@ -13,9 +13,10 @@ import {
 } from 'react-icons/fa';
 import Footer from '../components/Footer';
 import Navbar from "../components/Navbar";
+import { useNavigate } from 'react-router-dom';
 const Features = () => {
   const [activeFeature, setActiveFeature] = useState(null);
-
+  const navigate = useNavigate();
   const courses = [
     {
       icon: <FaDesktop className="text-4xl text-blue-600" />,
@@ -153,7 +154,7 @@ const Features = () => {
               </div>
               
               <div className="mt-4 flex justify-end">
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                <button onClick={() => navigate('/register')} className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300">
                   Enroll Now
                 </button>
               </div>

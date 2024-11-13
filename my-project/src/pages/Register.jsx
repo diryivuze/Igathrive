@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { FaUser, FaEnvelope, FaLock, FaHome, FaEye, FaEyeSlash } from 'react-icons/fa';
+import {
+  FaUser,  FaEnvelope,  FaLock,  FaHome,  FaEye,  FaEyeSlash,  FaPhoneAlt, FaCalendarDay} from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-
+import ReactCountryFlag from "react-country-flag";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -12,7 +13,10 @@ const Register = () => {
     fullName: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    countryCode: '+250',  // Default value
+    phoneNumber: '',
+    date: ''
   });
 
   const handleChange = (e) => {
@@ -24,9 +28,13 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add registration logic here
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords do not match.");
+      return; // Prevent form submission
+    }
     console.log('Form submitted:', formData);
   };
+  
 
   return (
     <div className="bg-gradient-to-b from-gray-400 to-gray-300 py-12 px-4 sm:px-6 lg:px-8">
@@ -87,7 +95,61 @@ const Register = () => {
                   required
                 />
               </div>
+{/* Country Code and Phone Number Section */}
+<div className="relative flex items-center space-x-2 w-full">
+  {/* Country Code Selector */}
+  <div className="relative w-1/3">
+    <div className="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-blue-600 transition-all duration-300">
+     
+      {/* Country Code Select */}
+      <select
+        name="countryCode"
+        value={formData.countryCode || '+250'}
+        onChange={handleChange}
+        className="w-full pl-2 pr-4 py-3 appearance-none text-center focus:outline-none rounded-r-lg"
+        required
+      >
+        <option value="+250">+250 (RW)</option>
+        <option value="+1">+1 (USA)</option>
+        <option value="+44">+44 (UK)</option>
+        <option value="+91">+91 (India)</option>
+        {/* Add more country codes as needed */}
+      </select>
+    </div>
+  </div>
 
+  {/* Phone Number Input */}
+  <div className="relative w-2/3">
+    <input
+      type="text"
+      name="phoneNumber"
+      value={formData.phoneNumber || ''}
+      onChange={handleChange}
+      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300"
+      placeholder="780 162 164"
+      required
+    />
+    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+      <FaPhoneAlt className="text-gray-400" />
+    </div>
+  </div>
+</div>
+
+     {/* Birthday date Input */}
+     <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <FaCalendarDay className="text-gray-400" />
+                </div>
+                <input
+                  type="date"
+                  name="date"
+                  value={formData.date}
+                  onChange={handleChange}
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300"
+                  placeholder="birthday date"
+                  required
+                />
+</div>
               {/* Password Input */}
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -164,6 +226,7 @@ const Register = () => {
         
             </p>
           </div>
+          
 
           {/* Welcome Section */}
           <div className="hidden md:block w-3/5 bg-gradient-to-br from-blue-950 to-blue-500 text-white p-12">
