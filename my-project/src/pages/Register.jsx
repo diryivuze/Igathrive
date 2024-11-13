@@ -106,7 +106,7 @@ const Register = () => {
         name="countryCode"
         value={formData.countryCode || '+250'}
         onChange={handleChange}
-        className="w-full pl-2 pr-4 py-3 appearance-none text-center focus:outline-none rounded-r-lg"
+        className="w-full pl-2 pr-4 py-3 appearance-none text-center text-gray-400 focus:outline-none rounded-r-lg"
         required
       >
         <option value="+250">+250 (RW)</option>
@@ -137,7 +137,7 @@ const Register = () => {
 
      {/* Birthday date Input */}
      <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center  pointer-events-none">
                   <FaCalendarDay className="text-gray-400" />
                 </div>
                 <input
@@ -145,7 +145,7 @@ const Register = () => {
                   name="date"
                   value={formData.date}
                   onChange={handleChange}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all text-gray-400 duration-300"
                   placeholder="birthday date"
                   required
                 />

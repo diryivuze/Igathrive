@@ -45,7 +45,13 @@ const Navbar = () => {
               <span className={`text-2xl font-bold transition-all duration-300 ${
                 isScrolled ? 'text-gray-900' : 'text-white'
               } group-hover:text-blue-500`}>
-                IgaThrive
+                   <img 
+      src="/images/logo.png" 
+      alt="IgaThrive Logo" 
+      className={`w-35 h-40 transition-all duration-300 ${
+        isScrolled ? 'filter brightness-0' : 'filter brightness-200'
+      } group-hover:filter brightness-100`} 
+    />
               </span>
             </a>
           </div>

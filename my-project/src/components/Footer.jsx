@@ -123,11 +123,10 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Connect With Us</h3>
             <div className="flex flex-wrap gap-4">
               {[
-                { icon: Facebook, href: '#', color: 'hover:text-blue-500' },
-                { icon: Twitter, href: '#', color: 'hover:text-blue-400' },
-                { icon: Instagram, href: '#', color: 'hover:text-pink-500' },
-                { icon: Linkedin, href: '#', color: 'hover:text-blue-600' },
-                { icon: Youtube, href: '#', color: 'hover:text-red-500' }
+                { icon: Twitter, href: 'https://www.instagram.com/igathrive_rwanda/', color: 'hover:text-blue-400' },
+                { icon: Instagram, href: 'https://www.instagram.com/igathrive_rwanda/', color: 'hover:text-pink-500' },
+                { icon: Linkedin, href: 'https://www.instagram.com/igathrive_rwanda/', color: 'hover:text-blue-600' },
+                { icon: Youtube, href: 'https://www.instagram.com/igathrive_rwanda/', color: 'hover:text-red-500' }
               ].map((social, index) => (
                 <a
                   key={index}
@@ -142,7 +141,7 @@ const Footer = () => {
             </div>
             
             {/* Additional Trust Indicators */}
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <p className="text-sm font-medium text-white mb-2">We Accept</p>
               <div className="flex gap-2">
                 {['Visa', 'Mastercard', 'PayPal'].map((payment) => (
@@ -154,7 +153,7 @@ const Footer = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
