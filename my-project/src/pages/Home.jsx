@@ -183,7 +183,7 @@ const Home = () => {
             >
               <div className="aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden">
               <img 
-               src="/My Professional Photo.jpg" 
+               src="../images/founder.jpg" 
                alt="Founder" 
                className="w-full h-full object-cover" 
               />
@@ -199,24 +199,17 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <span className="text-blue-600 font-semibold">Our Story</span>
-              <h2 className="text-4xl font-bold">Bridging the Digital Divide</h2>
+              <span className="text-blue-600 font-extrabold text-4xl">OUR STORY</span>
+              <h2 className="text-3xl font-bold">Bridging the Digital Divide</h2>
               <p className="text-gray-600 leading-relaxed">
-                During my primary school years, I witnessed firsthand the struggles many face in our increasingly digital world. The lack of basic digital literacy skills wasn't just an inconvenience – it was a barrier to education, employment, and full participation in modern society.
+  When I was in primary school, I was really interested in technology. But because I went to a public school with few resources, I never got the chance to use a laptop or learn more about computers. This motivated me to start going to internet cafes, where I would explore the latest tech updates and learn as much as I could. My passion for technology eventually led me to study Software Engineering at the African Leadership University (ALU), where I wanted to build the skills I missed out on. During my studies, I saw that many young people struggled to find jobs because they didn’t have basic digital skills. This made it hard for them to get hired or start their own businesses.
+</p>
+<p className="text-gray-600 leading-relaxed">
+  That’s why I started IgaThrive. I realized that digital skills are essential for success in today’s world. IgaThrive was created to help people gain these important skills—from basic computer use to more advanced IT training. Our mission is to give everyone the chance to build their digital knowledge and open up new job and business opportunities.
+</p>
+              <p className="text-gray-900 leading-relaxed">
+               Founder & CEO (IgaThrive)
               </p>
-              <p className="text-gray-600 leading-relaxed">
-                This realization sparked the idea for IgaThrive. We understand that in today's world, digital literacy isn't optional – it's essential. From basic computer operations to advanced IT skills, we're here to ensure no one gets left behind in the digital revolution.
-              </p>
-              <div className="grid grid-cols-2 gap-6 pt-6">
-                <div className="space-y-2">
-                  <h4 className="text-xl font-semibold">Our Mission</h4>
-                  <p className="text-gray-600">Empowering communities through accessible digital education</p>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="text-xl font-semibold">Our Vision</h4>
-                  <p className="text-gray-600">A digitally literate society where technology enables rather than excludes</p>
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>
@@ -232,7 +225,7 @@ const Home = () => {
             className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center"
           >
             {[
-              { label: 'Active Students', value: '20+', icon: Users },
+              { label: 'Active Students', value: '10+', icon: Users },
               { label: 'Courses Offered', value: '7', icon: BookOpen },
               { label: 'Expert Instructors', value: '5+', icon: Star },
               { label: 'Success Rate', value: '95%', icon: CheckCircle }
@@ -343,7 +336,7 @@ const Home = () => {
             className="space-y-6"
           >
             <h2 className="text-4xl font-bold text-gray-900">Ready to Start Your Journey?</h2>
-            <p className="text-blue-100 max-w-2xl mx-auto">
+            <p className="text-blue-950 max-w-2xl mx-auto">
               Join thousands of students who have already transformed their lives through digital literacy
             </p>
             <Link

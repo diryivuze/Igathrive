@@ -40,8 +40,8 @@ const Login = () => {
     }, 1500);
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+  return (  
+    <div className="bg-gradient-to-b from-gray-400 to-gray-300 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       {/* Home Button */}
       <div className="absolute top-4 left-4">
         <button 
@@ -54,7 +54,7 @@ const Login = () => {
       </div>
 
       {/* Main Container */}
-      <div className="max-w-5xl mx-auto mt-10">
+      <div className="max-w-5xl mx-auto mt-5">
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
           <div className="flex flex-col md:flex-row">
             {/* Left Side - Welcome Section */}

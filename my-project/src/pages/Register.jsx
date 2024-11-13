@@ -29,7 +29,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-b from-gray-400 to-gray-300 py-12 px-4 sm:px-6 lg:px-8">
       {/* Home Button */}
       <div className="absolute top-4 left-4">
         <button 
@@ -45,7 +45,7 @@ const Register = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="max-w-5xl mx-auto mt-10"
+        className="max-w-5xl mx-auto mt-5"
       >
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
           {/* Form Section */}

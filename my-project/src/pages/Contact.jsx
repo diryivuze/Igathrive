@@ -75,7 +75,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-blue-100 to-gray-100 min-h-screen">
+    <div className="bg-gradient-to-b from-gray-400 to-gray-50 min-h-screen">
       <Navbar />
       
       <motion.div 
@@ -85,7 +85,7 @@ const Contact = () => {
         variants={containerVariants}
       >
         <motion.h1 
-          className="text-5xl font-bold text-center text-blue-950 mt-20 mb-16"
+          className="text-5xl font-bold text-center text-blue-950 mt-10 mb-16"
           variants={itemVariants}
         >
           Get in Touch

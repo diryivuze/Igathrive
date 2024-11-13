@@ -51,6 +51,13 @@ const Features = () => {
       description: 'Create modern and responsive websites',
       duration: '12 weeks',
       skills: ['HTML/CSS', 'JavaScript', 'Responsive Design'],
+    },
+    {
+      icon: <FaDesktop className="text-4xl text-blue-600" />,
+      title: 'Professional Skills',
+      description: 'Master digital design and image manipulation techniques',
+      duration: '6 weeks',
+      skills: ['Problem solving', 'Time management', 'Creativity','Teamwork','Communication','Leadership','Adaptability'],
     }
   ];
 
@@ -73,11 +80,11 @@ const Features = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="bg-gradient-to-b from-gray-400 to-gray-50 min-h-screen">
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mt-20 mb-4">
+          <h1 className="text-4xl font-bold text-gray-900 mt-10 mb-4">
             Discover Our Features
           </h1>
           <p className="text-xl text-gray-600">

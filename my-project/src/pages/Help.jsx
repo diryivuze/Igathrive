@@ -88,11 +88,11 @@ const Help = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="bg-gradient-to-b from-gray-400 to-gray-50 min-h-screen">
        <Navbar />
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mt-20 mb-4">
+          <h1 className="text-4xl font-bold text-gray-900 mt-10 mb-4">
             How Can We Help You?
           </h1>
           <div className="relative max-w-xl mx-auto">
@@ -109,17 +109,17 @@ const Help = () => {
 
         {/* Quick Support Section */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <div className="bg-blue-950 text-white p-6 rounded-xl shadow-lg flex items-center">
+          <div className="bg-gray-900 text-white p-6 rounded-xl shadow-lg flex items-center">
             <FaHeadset className="text-4xl mr-4" />
             <div>
               <h3 className="text-xl font-semibold mb-2">Need Immediate Help?</h3>
               <p className="mb-4">Our support team is available 24/7</p>
-              <button className="bg-white text-blue-950 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+              <button className="bg-white text-gray-900 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-300">
                 Contact Support
               </button>
             </div>
           </div>
-          <div className="bg-green-950 text-white p-6 rounded-xl shadow-lg flex items-center">
+          <div className="bg-blue-600 text-white p-6 rounded-xl shadow-lg flex items-center">
             <FaEnvelope className="text-4xl mr-4" />
             <div>
               <h3 className="text-xl font-semibold mb-2">Email Support</h3>
@@ -139,7 +139,7 @@ const Help = () => {
               onClick={() => setActiveCategory(category.id)}
               className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                 activeCategory === category.id
-                  ? 'bg-blue-950 text-white shadow-lg'
+                  ? 'bg-gray-900 text-white shadow-lg'
                   : 'bg-white text-gray-700 hover:bg-gray-50'
               }`}
             >
@@ -179,12 +179,12 @@ const Help = () => {
         </div>
 
         {/* Still Need Help Section */}
-        <div className="mt-12 text-center bg-white p-8 rounded-xl shadow-lg">
+        <div className="mt-12 text-center bg-transparent p-8 rounded-xl shadow-lg">
           <h3 className="text-2xl font-semibold mb-4">Still Need Help?</h3>
           <p className="text-gray-600 mb-6">
             Can't find what you're looking for? Our support team is ready to assist you.
           </p>
-          <button className="bg-blue-950 text-white px-8 py-3 rounded-lg hover:bg-blue-300 hover:text-blue-950 transition-colors duration-300">
+          <button className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-blue-300 hover:text-gray-900 transition-colors duration-300">
             Contact Us
           </button>
         </div>

@@ -7,8 +7,8 @@ import Footer from "../components/Footer";
 const About = () => {
   const team = [
     {
-      name: 'John Doe',
-      role: 'CEO & Founder',
+      name: 'Mr. Loue Sauveur Christian',
+      role: 'Web Design & Development Instructor',
       message: 'Driven by passion for innovation and excellence.',
       social: {
         linkedin: '#',
@@ -18,8 +18,8 @@ const About = () => {
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxo2NFiYcR35GzCk5T3nxA7rGlSsXvIfJwg&s'
     },
     {
-      name: 'Jane Smith',
-      role: 'Lead Developer',
+      name: 'Mr. Michael Alain Muhirwa',
+      role: 'Computer Components & Troubleshooting Instructor',
       message: 'Committed to crafting seamless and efficient solutions.',
       social: {
         linkedin: '#',
@@ -29,8 +29,39 @@ const About = () => {
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxo2NFiYcR35GzCk5T3nxA7rGlSsXvIfJwg&s'
     },
     {
-      name: 'Alice Johnson',
-      role: 'UI/UX Designer',
+      name: 'Mr. David Niyonshuti',
+      role: 'Computer Graphics Instructor',
+      message: 'Driven by passion for innovation and excellence.',
+      social: {
+        linkedin: '#',
+        github: '#',
+        twitter: '#'
+      },
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxo2NFiYcR35GzCk5T3nxA7rGlSsXvIfJwg&s'
+    },{
+      name: 'Mr. Daniel Iryivuze',
+      role: 'MS Office & G Suite Usage Instructor',
+      message: 'Committed to crafting seamless and efficient solutions.',
+      social: {
+        linkedin: '#',
+        github: '#',
+        twitter: '#'
+      },
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxo2NFiYcR35GzCk5T3nxA7rGlSsXvIfJwg&s'
+    },{
+      name: 'Miss. Vanessa Uwonkunda',
+      role: 'E-Banking Instructor',
+      message: 'Driven by passion for innovation and excellence.',
+      social: {
+        linkedin: '#',
+        github: '#',
+        twitter: '#'
+      },
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxo2NFiYcR35GzCk5T3nxA7rGlSsXvIfJwg&s'
+    },
+    {
+      name: 'Miss. Sonia Ikirezi Hirwa',
+      role: 'Professional Skills Instructor',
       message: 'Inspired by the power of intuitive and user-centric design.',
       social: {
         linkedin: '#',
@@ -69,7 +100,7 @@ const About = () => {
         variants={containerVariants}
       >
         <motion.h1 
-          className="text-5xl font-bold text-center text-blue-950 mt-20 mb-16"
+          className="text-5xl font-bold text-center text-blue-950 mt-10 mb-16"
           variants={itemVariants}
         >
           About us
@@ -99,7 +130,7 @@ const About = () => {
         </div>
 
         <motion.section variants={itemVariants} className="mb-16">
-          <h2 className="text-4xl font-semibold mb-12 text-center text-blue-950">Meet Our Team</h2>
+          <h2 className="text-4xl font-semibold mb-12 text-center text-blue-950">Meet Our Instructors</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <motion.div

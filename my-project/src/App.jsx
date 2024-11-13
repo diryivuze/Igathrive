@@ -8,6 +8,8 @@ import Help from './pages/Help';
 import Experience from './pages/Experience';
 import Register from './pages/Register';
 import Login from './pages/Login';
+// import CourseDetails from './pages/CourseDetails';
+
 
 const App = () => (
   <Router>
@@ -19,6 +21,7 @@ const App = () => (
         <Route path="/features" element={<Features />} />
         <Route path="/help" element={<Help />} />
         <Route path="/experience" element={<Experience />} />
+        {/* <Route path="/courses/:courseId" element={<CourseDetails />} /> */}
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>
