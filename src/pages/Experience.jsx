@@ -122,7 +122,17 @@ const Experience = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-400 to-gray-50 min-h-screen">
+    <div className="relative min-h-screen">
+    {/* Background Image with Overlay */}
+    <div
+      className="absolute inset-0 bg-cover bg-center"
+      style={{ backgroundImage: `url('/images/experience.png')` }}
+    >
+      <div className="absolute inset-0 bg-black/65"></div>
+    </div>
+
+    {/* Main Content */}
+    <div className="relative z-10">
       <Navbar />
       
       <motion.div 
@@ -132,12 +142,12 @@ const Experience = () => {
         variants={containerVariants}
       >
         <motion.h1 
-          className="text-4xl font-bold text-center text-blue-950 mt-10 mb-5"
+          className="text-4xl font-bold text-center text-blue-500 mt-10 mb-5"
           variants={itemVariants}
         >
           SUCCESS STORIES
         </motion.h1>
-        <p className="text-2xl text-gray-600 text-center mb-10">
+        <p className="text-2xl text-gray-200 text-center mb-10">
             Empowering your journey in technology education
           </p>
         {/* Stats Section */}
@@ -231,7 +241,7 @@ const Experience = () => {
 
         {/* CTA Section */}
         <motion.div
-          className="mt-16 text-center bg-blue-950 text-white p-12 rounded-xl shadow-lg"
+          className="mt-16 text-center bg-inherit text-white p-12 rounded-md shadow-lg"
           variants={itemVariants}
         >
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
@@ -246,8 +256,8 @@ const Experience = () => {
           </motion.button>
         </motion.div>
       </motion.div>
-      
       <Footer />
+</div>
     </div>
   );
 };

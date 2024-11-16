@@ -121,7 +121,7 @@ const Home = () => {
     // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Show loader for 2 seconds
+    }, 400); // Show loader for 2 seconds
 
     const slideTimer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);

@@ -75,9 +75,18 @@ const Contact = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-400 to-gray-50 min-h-screen">
+    <div className="relative min-h-screen">
+    {/* Background Image with Overlay */}
+    <div
+      className="absolute inset-0 bg-cover bg-center"
+      style={{ backgroundImage: `url('/images/contact..jpg')` }}
+    >
+      <div className="absolute inset-0 bg-black/65"></div>
+    </div>
+
+    {/* Main Content */}
+    <div className="relative z-10">
       <Navbar />
-      
       <motion.div 
         className="container mx-auto px-4 py-14"
         initial="hidden"
@@ -85,12 +94,12 @@ const Contact = () => {
         variants={containerVariants}
       >
         <motion.h1 
-          className="text-4xl font-bold text-center text-blue-950 mt-10 mb-5"
+          className="text-4xl font-bold text-center text-blue-500 mt-10 mb-5"
           variants={itemVariants}
         >
           GET IN TOUCH
         </motion.h1>
-        <p className="text-2xl text-gray-600 text-center mb-10">
+        <p className="text-2xl text-gray-200 text-center mb-10">
             Empowering your journey in technology education
           </p>
         <div className="grid md:grid-cols-2 gap-12 mb-16">
@@ -248,6 +257,7 @@ const Contact = () => {
     </motion.div>
       </motion.div>
       <Footer />
+    </div>
     </div>
   );
 };

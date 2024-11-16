@@ -81,14 +81,24 @@ const Features = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-400 to-gray-50 min-h-screen">
+    <div className="relative min-h-screen">
+    {/* Background Image with Overlay */}
+    <div
+      className="absolute inset-0 bg-cover bg-center"
+      style={{ backgroundImage: `url('/images/experience.jpeg')` }}
+    >
+      <div className="absolute inset-0 bg-black/65"></div>
+    </div>
+
+    {/* Main Content */}
+    <div className="relative z-10">
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mt-10 mb-5">
+          <h1 className="text-4xl font-bold text-blue-500 mt-10 mb-5">
             DISCOVER OUR FEATURES
           </h1>
-          <p className="text-2xl text-gray-600">
+          <p className="text-2xl text-gray-200">
             Empowering your journey in technology education
           </p>
         </div>
@@ -114,7 +124,7 @@ const Features = () => {
         </div>
 
         {/* Courses Section */}
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        <h2 className="text-3xl font-bold text-gray-200 mb-8 text-center">
           Our Course Offerings
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -163,6 +173,7 @@ const Features = () => {
         </div>
       </div>
       <Footer />
+      </div>
     </div>
   );
 };

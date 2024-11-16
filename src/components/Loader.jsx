@@ -3,7 +3,7 @@ import React from 'react';
 const IgaThriveLoader = () => {
   return (
     <div className="flex items-center justify-center w-full h-full min-h-[240px] bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-inner">
-      <div className="relative w-40 h-40 transform hover:scale-105 transition-transform duration-300">
+      <div className="relative w-40 h-40 transform hover:scale-105 transition-transform duration-100">
         {/* Background glow effect */}
         <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-xl animate-pulse" />
         
