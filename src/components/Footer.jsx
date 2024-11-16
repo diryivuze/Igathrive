@@ -32,7 +32,7 @@ const Footer = () => {
               <p className="mt-1 text-sm">Stay updated with our latest courses and offerings</p>
             </div>
             <form onSubmit={handleSubmit} className="w-full md:w-auto">
-              <div className="flex max-w-md mx-auto md:mx-0">
+              <div className="flex max-w-md mx-auto md:mx-0 mr-4">
                 <input
                   type="email"
                   value={email}
@@ -44,7 +44,7 @@ const Footer = () => {
                   type="submit"
                   className="px-6 py-2 bg-blue-600 text-white rounded-r-md hover:bg-blue-700 transition-colors duration-300 flex items-center gap-2"
                 >
-                  Subscribe
+                  Send
                   <Send size={16} />
                 </button>
               </div>

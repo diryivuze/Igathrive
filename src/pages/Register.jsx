@@ -41,6 +41,14 @@ const Register = () => {
       >
         <div className="absolute inset-0 bg-black/40">
         
+        {/* Main Container */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-screen-lg mx-auto"
+        >
+                  
         {/* Home Button */}
         <div className="absolute top-4 left-4">
           <button 
@@ -51,15 +59,7 @@ const Register = () => {
             <span className="hidden sm:inline">Home</span>
           </button>
         </div>
-        
-        {/* Main Container */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-screen-lg mx-auto mt-10"
-        >
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden flex  mt-20 flex-col md:flex-row">
             {/* Form Section */}
             <div className="w-full md:w-2/4 p-8">
               <div className="text-center mb-10">

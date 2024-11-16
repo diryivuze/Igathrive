@@ -122,7 +122,7 @@ const Experience = () => {
   ];
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-hidden">
     {/* Background Image with Overlay */}
     <div
       className="absolute inset-0 bg-cover bg-center"
