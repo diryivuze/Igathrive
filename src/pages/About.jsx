@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaUserCircle, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useNavigate } from 'react-router-dom';
@@ -14,8 +14,8 @@ const About = () => {
       message: 'Driven by passion for innovation and excellence.',
       social: {
         linkedin: '#',
-        github: '#',
-        twitter: '#'
+        instagram: '#',
+        gmail:''
       },
       image: '/images/loue.jpg'
     },
@@ -25,8 +25,8 @@ const About = () => {
       message: 'Committed to crafting seamless and efficient solutions.',
       social: {
         linkedin: '#',
-        github: '#',
-        twitter: '#'
+        instagram: '#',
+        gmail:''
       },
       image: '/images/man.jpg'
     },
@@ -36,8 +36,8 @@ const About = () => {
       message: 'Driven by passion for innovation and excellence.',
       social: {
         linkedin: '#',
-        github: '#',
-        twitter: '#'
+        instagram: '#',
+        gmail:''
       },
       image: '/images/david2.jpg'
     },{
@@ -46,8 +46,8 @@ const About = () => {
       message: 'Committed to crafting seamless and efficient solutions.',
       social: {
         linkedin: '#',
-        github: '#',
-        twitter: '#'
+        instagram: '#',
+        gmail:''
       },
       image: '/images/founder.jpg'
     },{
@@ -56,8 +56,8 @@ const About = () => {
       message: 'Driven by passion for innovation and excellence.',
       social: {
         linkedin: '#',
-        github: '#',
-        twitter: '#'
+        instagram: '#',
+        gmail:''
       },
       image: '/images/vanessa1.jpg'
     },
@@ -67,8 +67,8 @@ const About = () => {
       message: 'Inspired by the power of intuitive and user-centric design.',
       social: {
         linkedin: '#',
-        github: '#',
-        twitter: '#'
+        instagram: '#',
+        gmail:''
       },
       image: '/images/woman.png'
     }
@@ -96,18 +96,20 @@ const About = () => {
     <div className="bg-gradient-to-b from-gray-400 to-gray-50 min-h-screen">
       <Navbar />
       <motion.div 
-        className="container mx-auto px-4 py-16"
+        className="container mx-auto px-4 py-14"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
         <motion.h1 
-          className="text-5xl font-bold text-center text-blue-950 mt-10 mb-16"
+          className="text-4xl font-bold text-center text-blue-950 mt-10 mb-5"
           variants={itemVariants}
         >
-          About us
+          ABOUT US
         </motion.h1>
-
+        <p className="text-2xl text-gray-600 text-center mb-10">
+            Empowering your journey in technology education
+          </p>
         <div className="grid md:grid-cols-2 gap-16 mb-16">
           <motion.section variants={itemVariants} className="space-y-6">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -154,11 +156,11 @@ const About = () => {
                   <a href={member.social.linkedin} className="text-gray-600 hover:text-blue-950 transition-colors">
                     <FaLinkedin className="text-2xl" />
                   </a>
-                  <a href={member.social.github} className="text-gray-600 hover:text-blue-950 transition-colors">
-                    <FaGithub className="text-2xl" />
+                  <a href={member.social.instagram} className="text-gray-600 hover:text-blue-950 transition-colors">
+                    <FaInstagram className="text-2xl" />
                   </a>
-                  <a href={member.social.twitter} className="text-gray-600 hover:text-blue-950 transition-colors">
-                    <FaTwitter className="text-2xl" />
+                  <a href={member.social.instagram} className="text-gray-600 hover:text-blue-950 transition-colors">
+                    <FaEnvelope className="text-2xl" />
                   </a>
                 </div>
               </motion.div>

@@ -14,11 +14,11 @@ import {
 } from "lucide-react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import IgaThriveLoader from "../components/Loader"; // Add this import
+import IgaThriveLoader from "../components/Loader"; 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const [isLoading, setIsLoading] = useState(true); // Add loading state
+  const [isLoading, setIsLoading] = useState(true); // loading state
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -57,15 +57,15 @@ const Home = () => {
   ];
 
   const courses = [
-    {
-      title: "Computer Graphics",
-      timeframe: "4 weeks",
-      description:
-        "Master digital design principles and industry-standard software",
-      skills: ["Adobe Creative Suite", "3D Modeling", "Digital Design"],
-      students: 234,
-      rating: 4.8,
-    },
+    // {
+    //   title: "Computer Graphics",
+    //   timeframe: "4 weeks",
+    //   description:
+    //     "Master digital design principles and industry-standard software",
+    //   skills: ["Adobe Creative Suite", "3D Modeling", "Digital Design"],
+    //   students: 234,
+    //   rating: 4.8,
+    // },
     // {
     //   title: 'Internet Usage',
     //   timeframe: '3 weeks',
@@ -79,40 +79,40 @@ const Home = () => {
       timeframe: "5 weeks",
       description: "Understand hardware components and solve common PC issues",
       skills: ["Hardware Repair", "System Diagnostics", "Maintenance"],
-      students: 312,
+      students: 3,
       rating: 4.9,
-    },
-    {
-      title: "MS Office & G Suite Usage",
-      timeframe: "6 weeks",
-      description:
-        "Master essential productivity tools for the modern workplace",
-      skills: ["Document Processing", "Data Analysis", "Cloud Computing"],
-      students: 456,
-      rating: 4.7,
-    },
-    {
-      title: "E-Banking",
-      timeframe: "2 weeks",
-      description: "Navigate digital banking systems safely and efficiently",
-      skills: ["Digital Transactions", "Security Protocols", "Mobile Banking"],
-      students: 167,
-      rating: 4.5,
-    },
+},
+    // {
+    //   title: "MS Office & G Suite Usage",
+    //   timeframe: "6 weeks",
+    //   description:
+    //     "Master essential productivity tools for the modern workplace",
+    //   skills: ["Document Processing", "Data Analysis", "Cloud Computing"],
+    //   students: 456,
+    //   rating: 4.7,
+    // },
+    // {
+    //   title: "E-Banking",
+    //   timeframe: "2 weeks",
+    //   description: "Navigate digital banking systems safely and efficiently",
+    //   skills: ["Digital Transactions", "Security Protocols", "Mobile Banking"],
+    //   students: 167,
+    //   rating: 4.5,
+    // },
     {
       title: "Web Design & Development",
       timeframe: "8 weeks",
       description: "Create modern, responsive websites from scratch",
       skills: ["HTML/CSS", "JavaScript", "Responsive Design"],
-      students: 523,
-      rating: 4.9,
+      students: 5,
+      rating: 4.2,
     },
     {
       title: "Professional Skills",
       timeframe: "4 weeks",
       description: "Develop essential workplace and communication skills",
       skills: ["Communication", "Leadership", "Time Management"],
-      students: 289,
+      students: 2,
       rating: 4.7,
     },
   ];
@@ -239,9 +239,7 @@ const Home = () => {
                 When I was in primary school, I was really interested in
                 technology. But because I went to a public school with few
                 resources, I never got the chance to use a laptop or learn more
-                about computers. This motivated me to start going to internet
-                cafes, where I would explore the latest tech updates and learn
-                as much as I could. My passion for technology eventually led me
+                about computers.My passion for technology eventually led me
                 to study Software Engineering at the African Leadership
                 University (ALU), where I wanted to build the skills I missed
                 out on. During my studies, I saw that many young people

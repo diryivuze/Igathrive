@@ -85,10 +85,10 @@ const Features = () => {
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mt-10 mb-4">
-            Discover Our Features
+          <h1 className="text-4xl font-bold text-gray-900 mt-10 mb-5">
+            DISCOVER OUR FEATURES
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-2xl text-gray-600">
             Empowering your journey in technology education
           </p>
         </div>

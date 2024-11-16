@@ -132,12 +132,14 @@ const Experience = () => {
         variants={containerVariants}
       >
         <motion.h1 
-          className="text-5xl font-bold text-center text-blue-950 mt-10 mb-16"
+          className="text-4xl font-bold text-center text-blue-950 mt-10 mb-5"
           variants={itemVariants}
         >
-          Success Stories
+          SUCCESS STORIES
         </motion.h1>
-
+        <p className="text-2xl text-gray-600 text-center mb-10">
+            Empowering your journey in technology education
+          </p>
         {/* Stats Section */}
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"

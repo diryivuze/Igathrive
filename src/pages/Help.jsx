@@ -92,9 +92,12 @@ const Help = () => {
        <Navbar />
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mt-10 mb-4">
-            How Can We Help You?
+          <h1 className="text-4xl font-bold text-gray-900 mt-10 mb-5">
+            HOW CAN WE HELP YOU?
           </h1>
+          <p className="text-2xl text-gray-600 text-center mb-10">
+            Empowering your journey in technology education
+          </p>
           <div className="relative max-w-xl mx-auto">
             <FaSearch className="absolute left-3 top-3.5 text-gray-400" />
             <input

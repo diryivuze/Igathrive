@@ -79,18 +79,20 @@ const Contact = () => {
       <Navbar />
       
       <motion.div 
-        className="container mx-auto px-4 py-16"
+        className="container mx-auto px-4 py-14"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
         <motion.h1 
-          className="text-5xl font-bold text-center text-blue-950 mt-10 mb-16"
+          className="text-4xl font-bold text-center text-blue-950 mt-10 mb-5"
           variants={itemVariants}
         >
-          Get in Touch
+          GET IN TOUCH
         </motion.h1>
-
+        <p className="text-2xl text-gray-600 text-center mb-10">
+            Empowering your journey in technology education
+          </p>
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <motion.div variants={itemVariants} className="space-y-8">
             <div className="bg-white p-8 rounded-xl shadow-lg">
