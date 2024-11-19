@@ -62,7 +62,7 @@ const Login = () => {
         <div className="relative">
           {/* Main Container */}
           <div className="max-w-screen-lg z-10 mx-auto">
-            <div className="bg-white rounded-2xl mt-8 shadow-2xl overflow-x-hidden">
+            <div className="bg-white rounded-2xl mt-8  shadow-2xl overflow-x-hidden">
               <div className="flex flex-col md:flex-row w-full">
                 {/* Left Side - Welcome Section */}
                 <div className="hidden md:flex md:w-1/2 bg-gradient-to-br from-blue-950 to-blue-400 text-white p-12 flex-col justify-center items-center relative overflow-hidden">

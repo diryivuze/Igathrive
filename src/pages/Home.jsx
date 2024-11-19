@@ -147,7 +147,6 @@ const Home = () => {
   return (
     <div className="bg-gray-50 min-h-screen overflow-hidden">
       <Navbar />
-
       {/* Hero Section with Carousel */}
       <div className="relative h-[600px] overflow-hidden">
         {slides.map((slide, index) => (
@@ -203,63 +202,50 @@ const Home = () => {
 
       {/* Founder Section */}
       <div className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden">
-                <img
-                  src="../images/founder.jpg"
-                  alt="Founder"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-4 rounded-lg">
-                <p className="font-semibold">Founded in 2024</p>
-              </div>
-            </motion.div>
+        <div className="max-w-7xl mx-auto px-2">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+  <motion.div
+    initial={{ opacity: 0, x: -50 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8 }}
+    className="relative"
+  >
+    <div className="aspect-w-3 aspect-h-4 rounded-2xl overflow-hidden md:block hidden">
+      <img
+        src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3NjeWlkdzMxdmEwMnE1YTJmejVwbXVwMXptMGwxc2thMDNrNXdnbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vXfu0uxx5zH4blIzd3/giphy.webp"
+        alt="Founder"
+        className="w-fit h-fit object-cover"
+      />
+    </div>
+    {/* <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-4 rounded-lg">
+      <p className="font-semibold">Founded in 2024</p>
+    </div> */}
+  </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6"
-            >
-              <span className="text-blue-600 font-extrabold text-4xl">
-                OUR STORY
-              </span>
-              <h2 className="text-3xl font-bold">
-                Bridging the Digital Divide
-              </h2>
-              <p className="text-gray-600 leading-relaxed">
-                When I was in primary school, I was really interested in
-                technology. But because I went to a public school with few
-                resources, I never got the chance to use a laptop or learn more
-                about computers.My passion for technology eventually led me
-                to study Software Engineering at the African Leadership
-                University (ALU), where I wanted to build the skills I missed
-                out on. During my studies, I saw that many young people
-                struggled to find jobs because they didn’t have basic digital
-                skills. This made it hard for them to get hired or start their
-                own businesses.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                That’s why I started IgaThrive. I realized that digital skills
-                are essential for success in today’s world. IgaThrive was
-                created to help people gain these important skills—from basic
-                computer use to more advanced IT training. Our mission is to
-                give everyone the chance to build their digital knowledge and
-                open up new job and business opportunities.
-              </p>
-              <p className="text-gray-900 leading-relaxed">
-                Founder & CEO (IgaThrive)
-              </p>
-            </motion.div>
-          </div>
+  <motion.div
+    initial={{ opacity: 0, x: 50 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8 }}
+    className="space-y-5"
+  >
+    <span className="text-blue-600 font-extrabold text-4xl">
+      OUR STORY
+    </span>
+    <h2 className="text-3xl font-bold">
+      Bridging the Digital Divide
+    </h2>
+    <p className="text-gray-600 leading-relaxed">
+      I developed a passion for technology in primary school but lacked access to resources. This led me to study Software Engineering at ALU, where I saw many young people struggling due to a lack of digital skills.
+    </p>
+    <p className="text-gray-600 leading-relaxed">
+      To address this, I founded IgaThrive, aiming to equip people with essential digital skills for better job and business opportunities.
+    </p>
+    <p className="text-gray-900 leading-relaxed">
+      Founder & CEO (IgaThrive)
+    </p>
+  </motion.div>
+</div>
+
         </div>
       </div>
 
@@ -413,7 +399,6 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
-
       <Footer />
     </div>
   );
