@@ -19,22 +19,49 @@ const Students = () => {
   const [students, setStudents] = useState([
     { 
       id: 1, 
-      name: "John Doe", 
-      email: "john.doe@example.com",
-      progress: 80,
-      enrolledCourses: ["Web Design", "Professional Skills"],
-      avatar: "/api/placeholder/32/32",
-      lastActive: "2024-03-15"
+      name: "Raissa Mpawenayo", 
+      email: "raissampawenayogmail.com",
+      progress: 100,
+      enrolledCourses: ["Web Design and Development"],
+      avatar: "images/woman.png",
+      lastActive: "2024-10-16"
     },
     { 
       id: 2, 
-      name: "Jane Smith", 
-      email: "jane.smith@example.com",
-      progress: 70,
+      name: "Chancelline Niyotugendana", 
+      email: "chancelineniyo@gmail.com",
+      progress: 60,
       enrolledCourses: ["Computer Graphics", "E-Banking"],
-      avatar: "/api/placeholder/32/32",
+      avatar: "images/woman.png",
       lastActive: "2024-03-14"
     },
+    { 
+      id: 3, 
+      name: "Christopher Muneza", 
+      email: "munezatopher@gmail.com",
+      progress: 70,
+      enrolledCourses: ["Computer Graphics"],
+      avatar: "images/man.jpg",
+      lastActive: "2024-03-14"
+    },
+    {
+    id: 4, 
+    name: "Prencia Bella Arakaza", 
+    email: "jprenciaarakaza@gmail.com",
+    progress: 80,
+    enrolledCourses: ["Professional Skills"],
+    avatar: "images/woman.png",
+    lastActive: "2024-11-18"
+  },
+  { 
+    id: 5, 
+    name: "Joyeuse Nsabimana (Nana)", 
+    email: "nanajoyeuse@gmail.com",
+    progress: 70,
+    enrolledCourses: ["E-Banking"],
+    avatar: "images/woman.png",
+    lastActive: "2024-11-16"
+  }
   ]);
 
   const [searchTerm, setSearchTerm] = useState("");

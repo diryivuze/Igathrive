@@ -27,23 +27,23 @@ import {
 import Sidebar from '../components/Sidebar';
 
 const performanceData = [
-  { name: 'Week 1', completion: 65 },
-  { name: 'Week 2', completion: 72 },
-  { name: 'Week 3', completion: 85 },
-  { name: 'Week 4', completion: 78 },
+  { name: 'Week 4', completion: 0 },
+  { name: 'Week 8', completion: 2 },
+  { name: 'Week 12', completion: 4 },
+  { name: 'Week 16', completion: 10 },
 ];
 
 const courseEngagement = [
-  { name: 'Computer Graphics', students: 45, completion: 75 },
-  { name: 'Web Design', students: 38, completion: 82 },
-  { name: 'E-Banking', students: 32, completion: 68 },
-  { name: 'Professional Skills', students: 50, completion: 90 },
+  { name: 'Computer Graphics', students: 5, completion: 2 },
+  { name: 'Web Design', students: 8, completion: 3 },
+  { name: 'E-Banking', students: 2, completion: 2 },
+  { name: 'Professional Skills', students: 5, completion: 3 },
 ];
 
 const studentDistribution = [
-  { name: 'Active', value: 150 },
-  { name: 'Inactive', value: 20 },
-  { name: 'Completed', value: 80 },
+  { name: 'Active', value: 10 },
+  { name: 'Inactive', value: 8 },
+  { name: 'Completed', value: 10 },
 ];
 
 const COLORS = ['#0088FE', '#FF8042', '#00C49F'];
@@ -82,7 +82,7 @@ const Dashboard = () => {
       </div>
       <div className="space-y-4">
         {[
-          { icon: Award, text: 'John D. completed Professional Skills course', time: '2h ago' },
+          { icon: Award, text: 'Chancelline N. completed Professional Skills course', time: '2h ago' },
           { icon: Users, text: '15 new students enrolled this week', time: '5h ago' },
           { icon: Mail, text: 'New course feedback received', time: '1d ago' },
         ].map((activity, idx) => (
@@ -142,9 +142,9 @@ const Dashboard = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <StatCard icon={BookOpen} title="Active Courses" value="6" trend={12} color="bg-blue-500" />
-          <StatCard icon={Users} title="Total Students" value="250" trend={8} color="bg-green-500" />
-          <StatCard icon={Activity} title="Completion Rate" value="78%" trend={-3} color="bg-purple-500" />
-          <StatCard icon={Lightbulb} title="New Ideas Shared" value="15" trend={5} color="bg-yellow-500" />
+          <StatCard icon={Users} title="Total Students" value="20" trend={8} color="bg-green-500" />
+          <StatCard icon={Activity} title="Completion Rate" value="70%" trend={-4} color="bg-purple-500" />
+          <StatCard icon={Lightbulb} title="New Ideas Shared" value="9" trend={5} color="bg-yellow-500" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">

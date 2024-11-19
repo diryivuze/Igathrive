@@ -13,6 +13,7 @@ import Courses from './pages/Courses';
 import Students from './pages/Students';
 import QandA from './pages/QandA';
 import Logout from './pages/Logout';
+import Mentor from './pages/Mentors';
 
 
 const App = () => (
@@ -32,6 +33,7 @@ const App = () => (
         <Route path="/students" element={<Students />} />
         <Route path="/admin-iquiries" element={<QandA />} />
         <Route path="/logout" element={<Logout />} />
+        <Route path="/mentors" element={<Mentor/>} />
       </Routes>
 
     </div>

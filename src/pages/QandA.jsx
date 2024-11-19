@@ -16,9 +16,9 @@ const initialQuestions = [
     id: 1, 
     question: "How do I submit my assignment?", 
     details: "I'm trying to submit my assignment for Computer Graphics but I can't find the submission link.",
-    student: "Alice Johnson",
+    student: "Chancelline Niyotugendana",
     course: "Computer Graphics",
-    date: "2024-03-15",
+    date: "2024-11-15",
     resolved: false,
     priority: "high",
     replies: []
@@ -27,16 +27,16 @@ const initialQuestions = [
     id: 2, 
     question: "What is the deadline for the project?", 
     details: "Need clarification on the Web Development final project deadline.",
-    student: "Bob Smith",
+    student: "Raissa Mpawenayo",
     course: "Web Design and Development",
-    date: "2024-03-14",
+    date: "2024-11-17",
     resolved: true,
-    priority: "medium",
+    priority: "low",
     replies: [
       {
         author: "Admin",
-        text: "The deadline is March 30th, 2024",
-        date: "2024-03-14"
+        text: "The deadline is December 10th, 2024",
+        date: "2024-11-18"
       }
     ]
   },
@@ -44,11 +44,11 @@ const initialQuestions = [
     id: 3, 
     question: "Error in MS Excel formula", 
     details: "I'm getting a #REF error in my spreadsheet calculation.",
-    student: "Charlie Brown",
+    student: "Joyeuse Nsabimana (Nana)",
     course: "M.S. Office and G Suite Usage",
-    date: "2024-03-13",
+    date: "2024-11-19",
     resolved: false,
-    priority: "low",
+    priority: "medium",
     replies: []
   }
 ];
