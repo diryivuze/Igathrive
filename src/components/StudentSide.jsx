@@ -25,7 +25,7 @@ const StudentSide = () => {
     { icon: TrendingUp, label: 'Progressing', path: '/progress-courses' },
     { icon: MessageSquare, label: 'Q & A', path: '/student-chat' },
     { icon: Gamepad, label: 'Games', path: '/gamming' },
-    { icon: Gamepad, label: 'Settings', path: '/settings' },
+    { icon: Settings, label: 'Settings', path: '/settings' },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -56,7 +56,7 @@ const StudentSide = () => {
         >
           <div className="relative">
             <img
-              src="/images/man.jpg"
+              src="/images/christopher.jpg"
               alt="Student"
               className={`rounded-full border-2 border-blue-500 transition-transform duration-200 hover:scale-105
               ${isCollapsed ? 'w-8 h-8' : 'w-12 h-12'}`}

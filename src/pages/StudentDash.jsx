@@ -28,27 +28,27 @@ const performanceData = [
 const courses = [
   { 
     id: 1, 
-    name: 'Computer Graphics', 
-    icon: <Monitor className="w-6 h-6" />,
-    progress: 75,
+    name: 'E-Banking', 
+    icon: <DollarSign className="w-6 h-6" />,
+    progress: 50,
     nextClass: '10:00 AM Tomorrow',
-    assignments: 2
+    assignments: 10
   },
   { 
     id: 2, 
-    name: 'Computer Components and Troubleshooting', 
-    icon: <Layout className="w-6 h-6" />,
-    progress: 60,
-    nextClass: '2:00 PM Today',
-    assignments: 1
+    name: 'M.S. Office and G Suite Usage', 
+    icon: <FileSpreadsheet className="w-6 h-6" />,
+    progress: 100,
+    nextClass: 'Completed',
+    assignments: 0
   },
   { 
     id: 3, 
-    name: 'Web Design and Development', 
-    icon: <Globe className="w-6 h-6" />,
-    progress: 70,
-    nextClass: '1:00 PM Wednesday',
-    assignments: 3
+    name: 'Business Communication', 
+    icon: <Briefcase className="w-6 h-6" />,
+    progress: 100,
+    nextClass: 'Completed',
+    assignments: 0
   }
 ];
 
@@ -113,7 +113,7 @@ const StudentDash = () => {
         <div className="flex-1 p-4 sm:p-6 lg:p-8">
           {/* Welcome Section */}
           <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 mb-6 sm:mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Welcome back, Student!</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Welcome back, Christophe!</h2>
             <p className="text-sm sm:text-base text-gray-600">Track your progress and stay up to date with your courses.</p>
           </div>
 
@@ -133,7 +133,7 @@ const StudentDash = () => {
               <CheckCircle className="w-6 h-6 text-green-600" />
               <h3 className="font-semibold text-gray-800">Completed Tasks</h3>
             </div>
-            <p className="text-2xl font-bold text-gray-900">24/30</p>
+            <p className="text-2xl font-bold text-gray-900">31/41</p>
           </div>
           
           <div className="bg-white rounded-lg shadow-sm p-6">
@@ -141,14 +141,14 @@ const StudentDash = () => {
               <Clock className="w-6 h-6 text-purple-600" />
               <h3 className="font-semibold text-gray-800">Study Hours</h3>
             </div>
-            <p className="text-2xl font-bold text-gray-900">45h</p>
+            <p className="text-2xl font-bold text-gray-900">80h</p>
           </div>
           <div className="bg-white rounded-lg shadow-sm p-6">
             <div className="flex items-center space-x-3 mb-2">
               <Calendar className="w-6 h-6 text-orange-600" />
               <h3 className="font-semibold text-gray-800">Active Courses</h3>
             </div>
-            <p className="text-2xl font-bold text-gray-900">6</p>
+            <p className="text-2xl font-bold text-gray-900">1</p>
           </div>
           </div>
 

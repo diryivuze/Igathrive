@@ -22,9 +22,9 @@ const courses = [
     icon: <Monitor className="w-6 h-6" />,
     description: 'Learn about 2D/3D graphics, visualization, and animation techniques.',
     duration: '4 months',
-    students: '120+',
+    students: '4+',
     startDate: 'Flexible',
-    instructor: 'Dr. Sarah Johnson',
+    instructor: 'Mr. David Niyonshuti',
     skills: ['2D/3D Design', 'Animation', 'Rendering', 'CAD']
   },
   {
@@ -33,9 +33,9 @@ const courses = [
     icon: <Cpu className="w-6 h-6" />,
     description: 'Master hardware components and learn professional troubleshooting.',
     duration: '3 months',
-    students: '85+',
+    students: '8+',
     startDate: 'Immediate',
-    instructor: 'Prof. Robert Chen',
+    instructor: 'Mr. Michael Alain Muhirwa',
     skills: ['Hardware', 'Diagnostics', 'Maintenance', 'Repair']
   },
   {
@@ -44,9 +44,9 @@ const courses = [
     icon: < DollarSign className="w-6 h-6" />,
     description: 'Explore digital banking systems, security, and financial technology.',
     duration: '2 months',
-    students: '150+',
+    students: '6+',
     startDate: 'Next Week',
-    instructor: 'Ms. Emily Parker',
+    instructor: 'Miss. Vanessa Uwonkunda',
     skills: ['Digital Banking', 'Security', 'Transactions', 'FinTech']
   },
   {
@@ -55,9 +55,9 @@ const courses = [
     icon: <FileSpreadsheet className="w-6 h-6" />,
     description: 'Master essential productivity tools for professional work.',
     duration: '2 months',
-    students: '200+',
+    students: '2+',
     startDate: 'Flexible',
-    instructor: 'Mr. David Wilson',
+    instructor: 'Mr. Daniel Iryivuze',
     skills: ['Office Suite', 'Documentation', 'Spreadsheets', 'Presentations']
   },
   {
@@ -66,9 +66,9 @@ const courses = [
     icon: <Globe className="w-6 h-6" />,
     description: 'Create modern, responsive websites using latest technologies.',
     duration: '6 months',
-    students: '175+',
+    students: '5+',
     startDate: 'Monthly',
-    instructor: 'Ms. Rachel Zhang',
+    instructor: 'Mr. Loue Sauveur Christian',
     skills: ['HTML/CSS', 'JavaScript', 'React', 'Responsive Design']
   },
   {
@@ -77,9 +77,9 @@ const courses = [
     icon: <Briefcase className="w-6 h-6" />,
     description: 'Develop essential workplace and communication skills.',
     duration: '3 months',
-    students: '250+',
+    students: '3+',
     startDate: 'Continuous',
-    instructor: 'Dr. Michael Brown',
+    instructor: 'Miss. Sonia Ikirezi Hirwa',
     skills: ['Communication', 'Leadership', 'Time Management', 'Teamwork']
   }
 ];
