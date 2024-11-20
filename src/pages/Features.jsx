@@ -27,7 +27,7 @@ const Features = () => {
     },
     {
       icon: <FaMobileAlt className="text-4xl text-green-600" />,
-      title: 'E-Banking Instructor',
+      title: 'E-Banking',
       description: 'Navigate the digital world safely and effectively',
       duration: '4 weeks',
       skills: ['Online Safety', 'Digital Literacy', 'Web Navigation'],
