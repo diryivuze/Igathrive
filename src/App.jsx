@@ -14,6 +14,13 @@ import Students from './pages/Students';
 import QandA from './pages/QandA';
 import Logout from './pages/Logout';
 import Mentor from './pages/Mentors';
+import NewCourses from './pages/NewCourses';
+import StudentDash from './pages/StudentDash';
+import StudentChat from './pages/StudentChat';
+import Progress from './pages/Progress';
+import Relaxation from './pages/Relaxation';
+import Completed from './pages/Completed';
+import StudentSettings from './pages/StudentSettings';
 
 
 const App = () => (
@@ -34,6 +41,13 @@ const App = () => (
         <Route path="/admin-iquiries" element={<QandA />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/mentors" element={<Mentor/>} />
+        <Route path="/new-courses" element={<NewCourses/>}/>
+        <Route path="/student-dashboard" element={<StudentDash/>}/>
+        <Route path="/student-chat" element={<StudentChat/>}/>
+        <Route path="/progress-courses" element={<Progress/>}/>
+        <Route path="/completed-courses" element={<Completed/>}/>
+        <Route path="/gamming" element={<Relaxation/>}/>
+        <Route path="/settings" element={<StudentSettings/>}/>
       </Routes>
 
     </div>

@@ -2,26 +2,30 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard,
-  BookOpen,
-  Users,
-  HelpCircle,
-  LogOut,
-  ChevronLeft,
+  Book,
+  CheckCircle,
+  TrendingUp,
+  MessageSquare,
+  Gamepad,
   Settings,
   Bell,
-  UserCheck,
-} from 'lucide-react';
+  LogOut,
+  ChevronLeft,
+  User,
+} from 'lucide-react'; 
 
 const StudentSide = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const location = useLocation();
 
   const menuItems = [
-    { icon: LayoutDashboard, label: 'Dashboard', path: '/admin-dashboard' },
-    { icon: BookOpen, label: 'Courses', path: '/courses' },
-    { icon: Users, label: 'Students', path: '/students' },
-    { icon: HelpCircle, label: 'Q&A', path: '/admin-iquiries' },
-    { icon: UserCheck, label: 'Mentors', path: '/mentors' },
+    { icon: LayoutDashboard, label: 'Dashboard', path: '/student-dashboard' },
+    { icon: Book, label: 'New Courses', path: '/new-courses' },
+    { icon: CheckCircle, label: 'Completed', path: '/completed-courses' },
+    { icon: TrendingUp, label: 'Progressing', path: '/progress-courses' },
+    { icon: MessageSquare, label: 'Q & A', path: '/student-chat' },
+    { icon: Gamepad, label: 'Games', path: '/gamming' },
+    { icon: Gamepad, label: 'Settings', path: '/settings' },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -53,7 +57,7 @@ const StudentSide = () => {
           <div className="relative">
             <img
               src="/images/man.jpg"
-              alt="Studen"
+              alt="Student"
               className={`rounded-full border-2 border-blue-500 transition-transform duration-200 hover:scale-105
               ${isCollapsed ? 'w-8 h-8' : 'w-12 h-12'}`}
             />
@@ -153,23 +157,6 @@ const StudentSide = () => {
           )}
         </Link>
       </div>
-
-      <style jsx>{`
-        @keyframes slideIn {
-          from {
-            transform: translateX(-100%);
-            opacity: 0;
-          }
-          to {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-
-        nav {
-          animation: slideIn 0.3s ease-out;
-        }
-      `}</style>
     </div>
   );
 };
